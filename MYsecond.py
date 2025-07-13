@@ -23,19 +23,15 @@ def shorten_url():
     short_url = generate_short_url(long_url)
     data[short_url] = long_url  # Store full shortened URL as key
     print(f"Short URL created: {short_url}")
-
-
-# Update the code below to solve the problem
-#-------------------------------------------------  
+    
 def retrieve_url():
     """retrieving original URL."""
-    short_url = input("Enter the short URL: ")
-    
-
-
-
-
-#-------------------------------------------------   
+    short_url = input("Enter the short URL: ").strip()
+    long_url = data.get(short_url)  # Direct lookup
+    if long_url:
+        print(f"Original URL: {long_url}")
+    else:
+        print("Short URL not found!")
 
 def user_choice(choice):
     if choice == "1":
