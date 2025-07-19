@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} FEEDBACK FORM PORTAL {%endblock%}
+
+{% block content %}
+<h2>send us a feedback</h2>
+<form method="POST" action="/feedback">
+    <label for="username">Name:</label><br>
+    <input type="text" name="username" id="username" placeholder="enter your name"><br><br>
+
+    <label for="message">Message:</label><br>
+    <input type="text" name="message" id="message" placeholder="enter your message"><br>
+    <input type="submit" value="Submit Form">
+
+
+
+</form>
+
+{% endblock %}
